@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Panier - Somofa Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="images/Logo-removebg-preview.png" alt="" width="125px"></a>
+      </div>
+      <nav>
+        <ul id="MenuItems">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="produits.html">Produits</a></li>
+          <li><a href="apropos.html">A propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="cart.html"><img src="images/cart.png" alt="" width="30px" height="30px"></a>
+      <img src="images/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
+    </div>
+  </div>
+
+  <div class="cart-container">
+    <h2>Mon Panier</h2>
+    <div class="cart-header">
+        <span class="product-header">Produit</span>
+        <span>Quantité</span>
+        <span class="subtotal-header">Sous-total</span>
+        <button class="remove-item" data-index="${index}"></button>
+      </div>
+    <div class="cart-items">
+    </div>
+    <div class="cart-total">
+      <h3>Total : <span id="cart-total">0 CFA</span></h3>
+      
+      <button id="checkout-btn" onclick="window.location.href='facture.html'">Passer la commande</button>
+    </div>
+  </div>
+  
+  <script src="cart.js"></script>
+</body>
+</html>
